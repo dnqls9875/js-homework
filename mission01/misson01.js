@@ -13,26 +13,13 @@
 // const getValueAtObject = (obj, key) => obj[key]; // 화살표 함수는 한 줄로 작성 시 return 값을 작성하지 않고도 return 해준다.
 
 // 에러 메시지 출력 조건문
-const getValueAtObject = (obj, key) => {
+function getValueAtObject(obj, key) {
   if (key in obj) {
     return obj[key];
   } else {
     console.error("잘못 작성하였습니다. 올바른 내용을 작성해주세요.");
   }
-};
-
-const user = {
-  name: "이우빈",
-  age: 30,
-  email: "dnqls9875@gmail.com",
-  city: "양주",
-};
-
-console.log(getValueAtObject(user, "name")); // 이우빈
-console.log(getValueAtObject(user, "age")); // 30
-console.log(getValueAtObject(user, "email")); //  dnqls9875@gmail.com
-console.log(getValueAtObject(user, "city")); // 양주
-console.log(getValueAtObject(user, "hobby")); // 에러메시지 , undefined
+}
 
 // ! 배열
 /**
@@ -43,13 +30,13 @@ console.log(getValueAtObject(user, "hobby")); // 에러메시지 , undefined
 
 // const getNumberAtArray = (arr, index) => arr[index];
 
-const getNumberAtArray = (arr, index) => {
-  if (arr[index]) {
+function getNumberAtArray(arr, index) {
+  if (index >= 0 && index < arr.length) {
     return arr[index];
   } else {
     console.error("Error!");
   }
-};
+}
 
 const numbers = [10, 20, 30, 40, 50];
 
