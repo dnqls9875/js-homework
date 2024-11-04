@@ -6,6 +6,12 @@
  */
 //
 
+const person = {
+  name: "Alice",
+  age: 25,
+  city: "Wonderland",
+};
+
 // const getValueAtObject = (obj, key) => {
 //   return obj[key];
 // };
@@ -20,6 +26,11 @@ function getValueAtObject(obj, key) {
     console.error("잘못 작성하였습니다. 올바른 내용을 작성해주세요.");
   }
 }
+
+console.log(getValueAtObject(person, "name")); // 'Alice'
+console.log(getValueAtObject(person, "age")); // 25
+console.log(getValueAtObject(person, "city")); // 'Wonderland'
+console.log(getValueAtObject(person, "country")); // Error !
 
 // ! 배열
 /**
