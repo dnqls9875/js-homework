@@ -71,17 +71,17 @@ const object = {
 // 객체에 키를 입력했을 때 값이 나오길 기대
 // 함수는 매개변수를 유연하게 받을수록 재사용성이 증가
 
-function getValueAtObject(object, key) {
+function getValueAtObject_(object, key) {
   // if (!(Object.prototype.toString.call(object).slice(8, -1).toLowerCase() === "object")) {
-  //   console.error("getValueAtObject 함수의 첫 번째 인수는 객체 타입 이여야 합니다.");
+  //   console.error("getValueAtObject_ 함수의 첫 번째 인수는 객체 타입 이여야 합니다.");
   // }
 
   if (!(typeof object === "object")) {
-    throw new TypeError("getValueAtObject 함수의 첫 번째 인수는 객체 타입 이여야 합니다.");
+    throw new TypeError("getValueAtObject_ 함수의 첫 번째 인수는 객체 타입 이여야 합니다.");
   }
 
   if (typeof object !== "string") {
-    throw new TypeError("getValueAtObject 함수의 첫 번째 인수는 문자 타입 이여야 합니다.");
+    throw new TypeError("getValueAtObject_ 함수의 첫 번째 인수는 문자 타입 이여야 합니다.");
   }
 
   if (!(key in object)) {
@@ -90,7 +90,7 @@ function getValueAtObject(object, key) {
   return object[key];
 }
 
-getValueAtObject(object, "name"); // '이우빈'
+getValueAtObject_(object, "name"); // '이우빈'
 
 // 뭐 부터 시작하지?
 
@@ -121,7 +121,7 @@ console.log(_getValueAtObject(obj, "name"));
 
 const arr = ["정주연", "박혜미", "김영현"];
 
-function getNumberAtArray(array, index) {
+function _getNumberAtArray(array, index) {
   if (!Array.isArray(array)) {
     throw new Error(`전달된 첫 번째 인수의 데이터 타입은 ${typeof array} 타입 입니다. 해당 함수의 첫 번째 인수는 배열 타입 이어야 합니다.`);
   }
@@ -133,4 +133,4 @@ function getNumberAtArray(array, index) {
   }
 }
 
-console.log(getNumberAtArray(arr, 3));
+console.log(_getNumberAtArray(arr, 3));
