@@ -276,11 +276,11 @@ body {
   background-image: url(./../images/icon-checked.svg);
 }
 
-.welcome{
+.welcome {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-50%, -50%);
   font-size: 5rem;
   font-weight: bold;
 }
