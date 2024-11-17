@@ -4,5 +4,5 @@
 
 | 주차  | 과제명                             | 과제 확인 여부 |
 | :---- | :--------------------------------- | :------------- |
-| 1주차 | [misson01](./md/misson01.md)       |                |
-| 2주차 | [naver_login](./md/naver_login.md) |                |
+| 1주차 | [misson01](./md/misson01.md)       | ✔              |
+| 3주차 | [naver_login](./md/naver_login.md) |                |
