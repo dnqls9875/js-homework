@@ -6,4 +6,4 @@
 | :---- | :--------------------------------- | :------------- |
 | 1주차 | [misson01](./md/misson01.md)       | ✔              |
 | 3주차 | [naver_login](./md/naver_login.md) | ✔              |
-| 4주차 | [poster](./md/poster.md)           |                |
+| 4주차 | [poster](./md/poster.md)           | ✔              |
