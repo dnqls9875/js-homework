@@ -12,13 +12,14 @@ import { data } from "./data.js";
 
 const nav = document.querySelector(".nav");
 const list = document.querySelectorAll("ul li");
+let currentSound = null;
 
 // 배경색 변경 함수
 function setBgColor(colorA, colorB = "#000") {
   document.body.style.background = `linear-gradient(to bottom, ${colorA},${colorB})`;
 }
 
-// visual image alt값 변경 함수
+// visual image alt값 변경 함수,
 function setImage(image, alt) {
   const visual = document.querySelector(".visual img");
 
@@ -29,6 +30,13 @@ function setNameText(text) {
   const nickName = document.querySelector(".nickName");
 
   nickName.textContent = text;
+}
+
+// 오디오 함수
+function setAudio(audio) {
+  if (currentSound) currentSound.pause();
+  currentSound = new Audio(`./assets/audio/${audio}`);
+  currentSound.play();
 }
 
 function clickHandler(e) {
@@ -54,5 +62,7 @@ function clickHandler(e) {
   setImage(targetData.name, targetData.alt);
 
   setNameText(targetData.name);
+
+  setAudio(targetData.audio);
 }
 nav.addEventListener("click", clickHandler);
