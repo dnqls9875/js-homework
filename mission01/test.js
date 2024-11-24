@@ -1,13 +1,22 @@
-let a = 2;
+const END_POINT = "https://jsonplaceholder.typicode.com/users";
 
-const p = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    let a = 5;
-    console.log(a);
-    resolve("결과값");
-  }, 1000);
-});
+const defaultOptions = {
+  method: "GET",
+  body: null,
+  headers: {
+    "Content-type": "application/json",
+  },
+};
 
-p.then((res) => {
-  console.log(res);
-});
+const response = await fetch(END_POINT);
+console.log(response); // fetch를 사용하면 response 객체를 반환
+
+async function fetchData() {
+  const data = await response.json();
+  console.log(data);
+
+  data.forEach((elem) => {
+    console.log(elem.name);
+  });
+}
+fetchData();
